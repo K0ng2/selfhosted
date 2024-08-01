@@ -1,0 +1,17 @@
+- type: 1
+  title: Lanraragi
+  name: lanraragi
+  description: Web application for archival and reading of manga/doujinshi. Lightweight and Docker-ready for NAS/servers.
+  logo: https://raw.githubusercontent.com/Difegue/LANraragi/dev/public/favicon.ico # Replace with the actual logo URL if available
+  image: difegue/lanraragi
+  platform: linux
+  categories:
+    - Books
+  restart_policy: always
+  ports:
+    - "3000": "3000:3000/tcp"
+  volumes:
+    - container: "/home/koyomi/lanraragi/content"
+      bind: ""
+    - container: "/home/koyomi/lanraragi/database"
+      bind: ""
