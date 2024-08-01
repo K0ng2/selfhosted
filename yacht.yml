@@ -7,7 +7,7 @@
   platform: linux
   categories:
     - Books
-  restart_policy: always
+  restart_policy: unless-stopped
   ports:
     - "3000": "3000:3000/tcp"
   volumes:
@@ -15,3 +15,19 @@
       bind: ""
     - container: "/home/koyomi/lanraragi/database"
       bind: ""
+- type: 1
+  title: Flaresolverr
+  name: flaresolverr
+  description: Proxy server to bypass Cloudflare protection
+  logo: https://avatars.githubusercontent.com/u/75936191
+  image: ghcr.io/flaresolverr/flaresolverr:latest
+  platform: linux
+  categories:
+    - Network
+  restart_policy: unless-stopped
+  ports:
+    - "8191": "8191:8191/tcp"
+  env:
+    - name: TZ
+      label: TZ
+      default: Etc/UTC
