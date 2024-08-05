@@ -43,3 +43,8 @@
   restart_policy: unless-stopped
   ports:
     - "5800": "5800:5800/tcp"
+  volumes:
+    - container: "/config"
+      bind: ""
+    - container: "/output"
+      bind: ""
