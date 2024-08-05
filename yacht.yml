@@ -31,3 +31,15 @@
     - name: TZ
       label: TZ
       default: Etc/UTC
+- type: 1
+  title: JDownloader 2
+  name: jdownloader2
+  description: JDownloader is a free, open-source download management tool with a huge community that makes downloading as easy and fast as it should be. Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. It's an easy-to-extend framework that can save hours of your valuable time every day!
+  logo: https://jdownloader.org/_media/knowledge/wiki/jdownloader.png
+  image: jlesage/jdownloader-2
+  platform: linux
+  categories:
+    - Download
+  restart_policy: unless-stopped
+  ports:
+    - "5800": "5800:5800/tcp"
